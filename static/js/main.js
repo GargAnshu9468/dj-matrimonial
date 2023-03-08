@@ -2,13 +2,14 @@
     "use strict";
 
     // Navbar on scrolling
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.navbar').fadeIn('slow').css('display', 'flex');
-        } else {
-            $('.navbar').fadeOut('slow').css('display', 'none');
-        }
-    });
+    $('.navbar').css('display', 'flex');
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > 200) {
+    //         $('.navbar').fadeIn('slow').css('display', 'flex');
+    //     } else {
+    //         $('.navbar').fadeOut('slow').css('display', 'none');
+    //     }
+    // });
 
 
     // Smooth scrolling on the navbar links
