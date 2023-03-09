@@ -8,18 +8,18 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
         <div class="navbar-nav ml-auto py-0">
-            <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
-            <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-            <a href="{% url 'story' %}" class="nav-item nav-link">Story</a>
-            <a href="{% url 'gallery' %}" class="nav-item nav-link">Gallery</a>
+            <a href="{% url 'home' %}" class="nav-item nav-link {% if request.path == '/' %} active {% endif %}">Home</a>
+            <a href="{% url 'about' %}" class="nav-item nav-link {% if request.path == '/about/' %} active {% endif %}" >About</a>
+            <a href="{% url 'story' %}" class="nav-item nav-link{% if request.path == '/story/' %} active {% endif %}">Story</a>
+            <a href="{% url 'gallery' %}" class="nav-item nav-link{% if request.path == '/gallery/' %} active {% endif %}">Gallery</a>
         </div>
         <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
             <h1 class="font-secondary text-white mb-n2">Jack <span class="text-primary">&</span> Rose</h1>
         </a>
         <div class="navbar-nav mr-auto py-0">
-            <a href="#family" class="nav-item nav-link">Family</a>
-            <a href="#event" class="nav-item nav-link">Event</a>
-            <a href="#rsvp" class="nav-item nav-link">RSVP</a>
+            <a href="{% url 'family' %}" class="nav-item nav-link{% if request.path == '/family/' %} active {% endif %}">Family</a>
+            <a href="{% url 'event' %}" class="nav-item nav-link{% if request.path == '/event/' %} active {% endif %}">Event</a>
+            <a href="{% url 'rsvp' %}" class="nav-item nav-link{% if request.path == '/rsvp/' %} active {% endif %}">RSVP</a>
             <a href="#contact" class="nav-item nav-link">Contact</a>
         </div>
     </div>

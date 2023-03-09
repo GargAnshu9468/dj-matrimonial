@@ -17,3 +17,15 @@ class Story(View):
 class Gallery(View):
     def get(self,request):
         return render(request,'components/gallery.html')
+
+class Family(View):
+    def get(self,request):
+        return render(request,'components/friends-family.html')
+
+class Event(View):
+    def get(self,request):
+        return render(request,'components/event.html')
+
+class RSVP(View):
+    def get(self,request):
+        return render(request,'components/rsvp.html')
