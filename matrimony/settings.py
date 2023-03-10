@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
+    'login.apps.LoginConfig',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +54,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'matrimony.urls'
 
-TEMPLATES_DIR = os.path.join(BASE_DIR,"templates")
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [
     {
