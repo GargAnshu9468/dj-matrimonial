@@ -15,4 +15,7 @@ class SignIn(View):
 
 class SignUp(View):
     def get(self, request):
-        pass
+        return render(request, 'login/signup.html')
+
+    def post(self, request):
+        return redirect('/')
