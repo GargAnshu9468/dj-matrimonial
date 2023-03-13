@@ -16,6 +16,7 @@
 
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                             <div class="card-body p-4 p-lg-5 text-black">
+                                {% if msg %}{{msg}}{% endif %}
 
                                 <form method="post">
                                     {% csrf_token %}
@@ -29,13 +30,19 @@
                                     </h5>
 
                                     <div class="form-outline mb-4">
-                                        <input type="first name" name="first name" id="form2Example17"
+                                        <input type="username" name="username" id="form2Example17"
+                                            class="form-control form-control-lg" />
+                                        <label class="form-label" for="form2Example17">Username</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="first name" name="fname" id="form2Example17"
                                             class="form-control form-control-lg" />
                                         <label class="form-label" for="form2Example17">First Name</label>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="last name" name="last name" id="form2Example17"
+                                        <input type="last name" name="lname" id="form2Example17"
                                             class="form-control form-control-lg" />
                                         <label class="form-label" for="form2Example17">Last Name</label>
                                     </div>
@@ -53,7 +60,7 @@
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="confirm password" name=" confirm password" id="form2Example27"
+                                        <input type="password" name="cpassword" id="form2Example27"
                                             class="form-control form-control-lg" />
                                         <label class="form-label" for="form2Example27">Confirm Password</label>
                                     </div>
