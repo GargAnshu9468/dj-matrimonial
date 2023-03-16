@@ -26,6 +26,9 @@
             <a href="{% url 'rsvp' %}" class="nav-item nav-link{% if request.path == '/matrimony/rsvp/' %} active {% endif %}">RSVP</a>
             <a href="#contact" class="nav-item nav-link">Contact</a>
         </div>
+        <div class="navbar-nav py-0 align-content-end">
+            <a class="nav-item nav-link" href="{% url 'logout' %}">logout</a>
+        </div>
 
     </div>
 </nav>
