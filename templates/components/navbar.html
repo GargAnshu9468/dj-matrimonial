@@ -27,7 +27,11 @@
             <a href="#contact" class="nav-item nav-link">Contact</a>
         </div>
         <div class="navbar-nav py-0 align-content-end">
-            <a class="nav-item nav-link" href="{% url 'logout' %}">logout</a>
+            <div class="d-flex flex-column align-items-center">
+                <i class="far fa-user-circle fa-2x m-0 p-0"></i>
+                <p class="nav-item nav-link m-0 p-0">{{request.user}}</p>
+                <a class="nav-item nav-link m-0 p-0 text-white small" href="{% url 'logout' %}">logout</a>
+            </div>
         </div>
 
     </div>
