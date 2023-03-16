@@ -20,11 +20,9 @@ class SignIn(View):
 
             if user is not None:
                 login(request, user)
-                next_url = request.GET.get('next', '/')
+                next_url = request.GET.get('next', 'home')
                 if next_url:
                     return redirect(next_url)
- 
-                return redirect('home')
 
             else:
                 error_message = 'Invalid username or password'
