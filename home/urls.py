@@ -9,4 +9,5 @@ urlpatterns = [
     path('family/', views.Family.as_view(), name='family'),
     path('event/', views.Event.as_view(), name='event'),
     path('rsvp/', views.RSVP.as_view(), name='rsvp'),
+    path('ajax/get_current_city/', views.get_current_city, name='get-current-city'),
 ]
