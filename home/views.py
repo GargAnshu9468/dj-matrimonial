@@ -51,13 +51,19 @@ def get_current_city(request):
     if not latitude and not longitude:
         return JsonResponse({'city': ''})
 
-    cities_dict = {}
+    min_rank = 0
+    nearest_city = ''
 
     for city, _, latitude_float, longitude_float in cities:
         rank = ((latitude_float - latitude) ** 2 + (longitude_float - longitude) ** 2) ** 0.5
-        cities_dict[rank] = {'city': city}
 
-    city = cities_dict[sorted(cities_dict)[0]].get('city')
-    return JsonResponse({'city': city})
+        if min_rank == 0:
+            min_rank = rank
+
+        if min_rank > rank:
+            min_rank = rank
+            nearest_city = city
+
+    return JsonResponse({'city': nearest_city})
 
 
