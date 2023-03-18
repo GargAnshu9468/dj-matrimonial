@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate,logout,login
 from django.contrib.auth.hashers import make_password,check_password
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 
 class SignIn(View):
@@ -50,6 +51,7 @@ class SignUp(View):
 
         user = User(first_name=first_name, last_name=last_name, email=email, password=has_pass, username=username)
         user.save()
+        messages.success(request, "You're register successfully")
         return redirect('/')
 
 def log_out(request):
